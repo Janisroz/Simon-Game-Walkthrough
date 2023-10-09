@@ -54,6 +54,12 @@ const {game, newGame, showScore, addTurn, lightsOn, showTurns} = require("../gam
     test("should display zero for eleement of id score", () => {
         expect(document.getElementById("score").innerText).toEqual(0);
     })
+    test("xpect data-listener to be true", () => {
+        const elements = document.getElementsByClassName("circle");
+        for (let element of elements) {
+            expect(element.getAttribute("data-listener")).toEqual("true")
+        }
+    })
  });
 
  describe("gameplay works correctly", () => {
